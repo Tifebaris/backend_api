@@ -1,0 +1,13 @@
+name: SMS_App
+env: python-3.9
+commands:
+  - pip install -r requirements.txt
+  - python manage.py migrate
+services:
+  - name: web
+    env:
+      - DJANGO_SETTINGS_MODULE=my_project.settings
+    ports:
+      - 8000:8000
+    routes:
+      - my-django-app.railway.app
