@@ -1,0 +1,1 @@
+web :python manage.py makemigrations && python manage.py migrate && SMS_API.wsgi -- log-file
